@@ -1,0 +1,127 @@
+/*****************************************************************************                                                                                                                            
+Name:           Pragya Harsh
+Roll Number:    2101AI23
+
+Subject: Computer Architecture Lab
+Subject Code: CS210
+Labs: 6-9
+Title: Claim file
+File Name: claims.txt
+
+Declaration of Authorship
+This claims.txt file, is part of the assignment of CS210 at the 
+Computer Science and Engineering dept., IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+* All the files that I've submitted, asm.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler including the output files from the 6 test examples has also been uploaded. They are test01(3 output files), test02(3 output files), 
+test03(3 output file), test04(3 output file), test05(3 output files) and bubble(3 output files) . 
+
+All the test files have been tested and work properly. 
+
+*asm.c is compilable with g++ asm.cpp -o asm
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * C++ Language is used to write it.
+    * asm.cpp is the main and only file of my assembler
+    * It is a 2 pass assembler (implemented in asm.cpp)
+    * All instructions (including SET) have been implemented.
+    * A Table of instruction names and expected operands is present.
+    * Outputs 3 files with the required information as follows :
+       *  .log : the errors and warnings on log file if not assembled properly.
+       *  .lst : file for listing 
+       *  .o : file for machine code 
+
+    * All important errors are diagnosed along with their line numbers ( unknown instruction , no such label , duplicate label )
+    * Along with errors it also generates Warnings whenever there is an unused label declared in the code.
+    * Comments are used.
+    * Self descriptive variable names have been used.
+    * Advanced Listing File gets generated that is bytes of instruction along with that instructions mnemonics .
+    * The Assembler is capable of understanding the values given in decimal , octal or hexadecimal format.
+    * SET instruction is also implemented. The breakage of SET into different instructions for implementation can be found in the code along with comments.
+    * Assembler successfully skips empty lines and comments
+
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested six examples shown as below. The errors only occurred in the file test02.asm and the program immediately stopped on the second pass. 
+Empty listing and machine readable object files were produced in their case. A proper error log file with all the errors raised was also produced.
+
+The others were tested without any errors detected and produced three output files, listing file(.lst), 
+error log file(.log) and machine readable object file(.o), for each example. 
+ 
+
+1)
+#Input: ./asm test01.asm
+#Output: 
+a. test01.lst 
+b. test01.log (with warning messages in log file as shown below)
+c. test01.o
+
+warning messages:
+1. Warning: Unused label at line 1
+2. Warning: Unused label at line 7
+No Error in Pass 2
+
+2)
+#Input: ./asm test02.asm
+#Output: 
+a. test02.lst 
+b. test02.log (with error messages in log file as shown below)
+c. test02.o
+
+error messages:
+1. Error: Repetition of Label at line 3
+2. Error: Wrong Syntax found at line 5
+3. Error: Missing operand at line 6
+4. Error: Extra operand at line 7
+5. Error: Extra operand at line 8
+6. Error: Wrong format for declaring label at line 9
+7. Error: Wrong Syntax found at line 10
+8. Error: Wrong Syntax found at line 11
+9. Error: Undeclared Label nonesuch
+10. Warning: Unused label at line 2
+11. Warning: Unused label at line 3
+
+3)
+#Input: ./asm test03.asm
+#Output: 
+a. test03.lst
+b. test03.log (without any error messages)
+c. test03.o
+
+
+4)
+#Input: ./asm test04.asm
+#Output: 
+a. test04.lst 
+b. test04.log (without any error messages)
+c. test04.o
+
+
+5)
+#Input: ./asm test05.asm
+#Output: 
+a. test05.lst 
+b. test05.log (without any error messages)
+c. test05.o
+
+
+6)
+#Input: ./asm bubble.asm
+#Output: 
+a. bubble.lst 
+b. bubble.log (without any error messages)
+c. bubble.o

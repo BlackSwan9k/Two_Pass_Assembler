@@ -1,0 +1,11 @@
+1. Error: Repetition of Label at line 3
+2. Error: Wrong Syntax found at line 5
+3. Error: Missing operand at line 6
+4. Error: Extra operand at line 7
+5. Error: Extra operand at line 8
+6. Error: Wrong format for declaring label at line 9
+7. Error: Wrong Syntax found at line 10
+8. Error: Wrong Syntax found at line 11
+9. Error: Undeclared Label nonesuch
+10. Warning: Unused label at line 2
+11. Warning: Unused label at line 3
